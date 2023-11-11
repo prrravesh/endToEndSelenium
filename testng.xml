@@ -1,0 +1,11 @@
+<suite name="Suite">
+	
+<listeners>  
+<listener class-name="testBase.ReportManager"/>  
+</listeners>  
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="Test.FirstTest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
