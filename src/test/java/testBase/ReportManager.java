@@ -26,8 +26,7 @@ public class ReportManager extends TestBase implements ITestListener{
 	String repName;
 
 	public void onStart(ITestContext testContext) {
-		String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date(2));// time stamp
-		repName = "Test-Report-" + timeStamp + ".html";
+		repName = "Test-Report-"  + ".html";
 
 		sparkReporter = new ExtentSparkReporter(".\\reports\\" + repName);// specify location of the report
 

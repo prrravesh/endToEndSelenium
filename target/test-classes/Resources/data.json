@@ -5,9 +5,14 @@
     "searchProduct":"ADIDAS ORIGINAL"
 },
 {
-    "email": "9760pkss@gmail.com",
+    "email": "9760pks@gmail.com",
     "pass":"9760pks",
-    "searchProduct":"ADIDAS ORIGINAL"
+    "searchProduct":"Default"
+},
+{
+    "email": "9760pks@gmail.com",
+    "pass":"9760pks",
+    "searchProduct":"Default"
 }
 
 
