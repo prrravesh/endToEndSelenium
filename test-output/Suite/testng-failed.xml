@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]">
   <listeners>
-    <listener class-name="testBase.Listerner"/>
+    <listener class-name="testBase.ReportManager"/>
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
