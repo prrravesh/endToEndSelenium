@@ -1,6 +1,8 @@
 package testBase;
 
 import java.io.FileInputStream;
+import org.apache.commons.io.FileUtils;
+
 
 import com.fasterxml.jackson.core.exc.StreamReadException;
 import com.fasterxml.jackson.core.type.TypeReference;
@@ -17,6 +19,7 @@ import java.io.IOException;
 import java.time.Duration;
 import java.util.Properties;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -29,7 +32,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 
 public class Driver_Commans {
-	public WebDriver driver;
+	public static WebDriver driver;
 
 	@BeforeClass()
 	public void initilizeDriver() throws IOException {
@@ -60,15 +63,18 @@ public class Driver_Commans {
 		driver.close();
 
 	}
-	public  String takeScreenShot(String name) throws IOException {
-		String path = System.getProperty("user.dir") + name + "//screenshots//screen.png";
-		TakesScreenshot st = (TakesScreenshot) driver;
-		File srcFile = st.getScreenshotAs(OutputType.FILE);
-		File destFile = new File(path);
-		Files.copy(srcFile, destFile);
-		System.out.println(path);
-		return path;
+	public  String takeScreenShot(String name) throws IOException 	{		
+		
+		TakesScreenshot takesScreenshot = (TakesScreenshot) driver;
+		File source = takesScreenshot.getScreenshotAs(OutputType.FILE);
+		String destination = System.getProperty("user.dir") + "\\screenshots\\" + name + "_" +  ".png";
 
+		try {
+			FileUtils.copyFile(source, new File(destination));
+		} catch (Exception e) {
+			e.getMessage();
+		}
+		return destination;
 
 	}
 	

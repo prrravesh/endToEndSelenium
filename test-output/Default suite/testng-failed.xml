@@ -5,9 +5,9 @@
     <classes>
       <class name="Test.testStartToEnd">
         <methods>
-          <include name="placeOrder"/>
           <include name="initilizeDriver"/>
           <include name="tearDown"/>
+          <include name="loginToApp" invocation-numbers="0"/>
         </methods>
       </class> <!-- Test.testStartToEnd -->
     </classes>

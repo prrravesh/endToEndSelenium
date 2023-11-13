@@ -1,5 +1,6 @@
 package testBase;
 
+
 import java.io.IOException;
 
 //import java.net.URL;
@@ -59,13 +60,13 @@ public class ReportManager implements ITestListener {
 		
 		System.out.println(result.getName());
 
-		/*try {
+	try {
 			String imgPath = new Driver_Commans().takeScreenShot(result.getName());
 			test.addScreenCaptureFromPath(imgPath);
 		} catch (IOException e1) {
 			e1.printStackTrace();
 		
-	}*/
+	}
 	}
 
 	public void onTestSkipped(ITestResult result) {
