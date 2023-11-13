@@ -6,13 +6,13 @@
   </listeners>
   <test thread-count="5" name="Test(failed)" verbose="0">
     <classes>
-      <class name="Test.FirstTest">
+      <class name="Test.testStartToEnd">
         <methods>
-          <include name="tearDown"/>
           <include name="initilizeDriver"/>
-          <include name="checkOrder"/>
+          <include name="tearDown"/>
+          <include name="loginToApp" invocation-numbers="0"/>
         </methods>
-      </class> <!-- Test.FirstTest -->
+      </class> <!-- Test.testStartToEnd -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

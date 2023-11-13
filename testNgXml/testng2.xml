@@ -1,0 +1,12 @@
+<suite parallel="tests" name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="Test.FirstTest"/>
+    </classes>
+  </test> <!-- Test -->
+    <test thread-count="5" name="Test2">
+    <classes>
+      <class name="Test.verifyOrder"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

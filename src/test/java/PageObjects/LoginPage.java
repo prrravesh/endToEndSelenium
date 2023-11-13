@@ -24,6 +24,12 @@ public class LoginPage {
 
 	@FindBy(name = "login")
 	private WebElement login;
+	
+	@FindBy(xpath = "//div[@class=\"left mt-1\"]//h3")
+	private WebElement logo;
+	
+	
+	
 
 	public void loginToApp(String user, String pass) {
 
@@ -31,6 +37,9 @@ public class LoginPage {
 		password.sendKeys(pass);
 		login.click();
 
+	}
+	public boolean loginSuccess() {
+		return logo.isDisplayed();		
 	}
 
 	public void goTo() {
